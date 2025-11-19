@@ -1,0 +1,12 @@
+﻿{
+  "applications": {
+    "AbpBlazorSolution": {
+      "type": "dotnet-project",
+      "launchUrl": "https://localhost:44393",
+      "path": "../../AbpBlazorSolution/AbpBlazorSolution.csproj",
+      "execution": {
+        "order": 0
+      }
+    }
+  }
+}
