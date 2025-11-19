@@ -1,13 +1,14 @@
-﻿using AbpBlazorSolution.Services.Dtos.Invoice;
+﻿using AbpBlazorSolution.Entities;
+using AbpBlazorSolution.Services.Dtos.Invoice;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
 
-namespace AbpBlazorSolution.Services.service.Invoice
+namespace AbpBlazorSolution.Services.service.Invoices
 {
-    public class InvoicesAppService : CrudAppService<Entities.Invoice, InvoicesDto, Guid, PagedAndSortedResultRequestDto, CreateUpdateInvoiceDto> , IInvoiceAppService
+    public class InvoicesAppService : CrudAppService<Invoice, InvoicesDto, Guid, PagedAndSortedResultRequestDto, CreateUpdateInvoiceDto> , IInvoiceAppService
     {
-        public InvoicesAppService(IRepository<Entities.Invoice, Guid> repository) : base(repository)
+        public InvoicesAppService(IRepository<Invoice, Guid> repository) : base(repository)
         {
         }
     }

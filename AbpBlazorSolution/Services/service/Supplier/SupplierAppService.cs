@@ -1,13 +1,14 @@
-﻿using AbpBlazorSolution.Services.Dtos.Supplier;
+﻿using AbpBlazorSolution.Entities;
+using AbpBlazorSolution.Services.Dtos.Supplier;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
 
-namespace AbpBlazorSolution.Services.service.Supplier
+namespace AbpBlazorSolution.Services.service.Suppliers
 {
-    public class SupplierAppService : CrudAppService<Entities.Supplier, SupplierDto, Guid, PagedAndSortedResultRequestDto, CreateUpdateSupplierDto> , ISupplierAppService
+    public class SupplierAppService : CrudAppService<Supplier, SupplierDto, Guid, PagedAndSortedResultRequestDto, CreateUpdateSupplierDto> , ISupplierAppService
     {
-        public SupplierAppService(IRepository<Entities.Supplier, Guid> repository) : base(repository)
+        public SupplierAppService(IRepository<Supplier, Guid> repository) : base(repository)
         {
         }
     }

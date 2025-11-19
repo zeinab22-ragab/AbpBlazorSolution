@@ -1,13 +1,14 @@
-﻿using AbpBlazorSolution.Services.Dtos.Status;
+﻿using AbpBlazorSolution.Entities;
+using AbpBlazorSolution.Services.Dtos.Status;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
 
-namespace AbpBlazorSolution.Services.service.Status
+namespace AbpBlazorSolution.Services.service.Statuses
 {
-    public class StatusAppService : CrudAppService<Entities.Status, StatusDto, Guid, PagedAndSortedResultRequestDto, CreateUpdateStatusDto> ,IStatusAppService
+    public class StatusAppService : CrudAppService<Status, StatusDto, Guid, PagedAndSortedResultRequestDto, CreateUpdateStatusDto> ,IStatusAppService
     {
-        public StatusAppService(IRepository<Entities.Status, Guid> repository) : base(repository)
+        public StatusAppService(IRepository<Status, Guid> repository) : base(repository)
         {
         }
     }
